@@ -1,0 +1,24 @@
+<div class="row">
+  <div class=" large-8 large-centered columns"><h2 class="center">Convert External Styles To Inline CSS</h2></div>
+	<div class="large-6 columns">
+		<form action="/" method="post">
+		<input name="authenticity_token"
+               type="hidden"
+               value="<%= form_authenticity_token %>"/>
+
+		  <label for="html">HTML</label>
+		  <textarea id="html" name="html" rows="8"><%= @html %></textarea><br />
+
+			<label for="css">CSS</label>
+		  <textarea id="css" name="css" rows="8"><%= @css %></textarea><br />
+
+
+		  <input type="submit"/>
+		</form>
+	</div>
+	<div class="large-6 columns">
+	<label for="html">Output HTML</label>
+	<textarea id="output" name="output" rows="20"><%= @output %></textarea><br />
+	<!-- Time taken by Premailer to inline css : <%= @time %> -->
+	</div>
+</div>
